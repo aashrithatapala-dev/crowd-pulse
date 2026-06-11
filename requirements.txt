@@ -1,2 +1,4 @@
-# Dashboard: no Python dependencies (hosted on Netlify)
-# Detector dependencies are in detector/requirements.txt
+firebase-admin>=6.0.0
+opencv-python-headless>=4.8.0
+ultralytics>=8.0.0
+yt-dlp>=2024.1.0
