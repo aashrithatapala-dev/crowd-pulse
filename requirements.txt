@@ -1,0 +1,2 @@
+# Dashboard: no Python dependencies (hosted on Netlify)
+# Detector dependencies are in detector/requirements.txt

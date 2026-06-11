@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GodavariPro – CrowdPulse Dashboard</title>
+    <meta name="description" content="Real-time crowd monitoring dashboard for Godavari Ghat using AI-powered people detection.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+
+    <header>
+        <div class="logo-area">
+            <h1>GodavariPro CrowdPulse</h1>
+            <p>AI-powered real-time crowd monitoring system</p>
+        </div>
+        <div class="live-badge">
+            <div class="live-dot"></div>
+            LIVE
+        </div>
+    </header>
+
+    <div id="status-banner">
+        <div class="status-left">
+            <div class="status-icon" id="status-icon">⏳</div>
+            <div>
+                <div class="status-label">Current Status</div>
+                <div id="status-text" style="color: var(--muted);">Connecting to Firebase...</div>
+            </div>
+        </div>
+        <div class="status-right">
+            <div class="ghat-label">Monitoring Zone</div>
+            <div id="ghat-name">—</div>
+        </div>
+    </div>
+
+    <div class="cards-grid">
+        <div class="card entered">
+            <span class="card-icon">🚶‍♂️</span>
+            <div class="card-label">Entered</div>
+            <div class="card-value" id="entered">0</div>
+            <div class="card-sub">Total entries counted</div>
+        </div>
+        <div class="card exited">
+            <span class="card-icon">🚪</span>
+            <div class="card-label">Exited</div>
+            <div class="card-value" id="exited">0</div>
+            <div class="card-sub">Total exits counted</div>
+        </div>
+        <div class="card current">
+            <span class="card-icon">👥</span>
+            <div class="card-label">Currently Inside</div>
+            <div class="card-value" id="current">0</div>
+            <div class="card-sub">People present right now</div>
+        </div>
+        <div class="card detected">
+            <span class="card-icon">🔍</span>
+            <div class="card-label">AI Detected</div>
+            <div class="card-value" id="detected">0</div>
+            <div class="card-sub">Detected in last frame</div>
+        </div>
+    </div>
+
+    <div class="capacity-section">
+        <div class="capacity-header">
+            <div class="capacity-title">Ghat Capacity Usage</div>
+            <div id="capacity-pct">0%</div>
+        </div>
+        <div class="progress-track">
+            <div id="progress-bar"></div>
+        </div>
+        <div class="capacity-sub">Max capacity: <strong>50 people</strong></div>
+    </div>
+
+    <div class="history-section">
+        <div class="history-title">Recent Readings</div>
+        <div class="history-list" id="history-list">
+            <div class="history-item"><span class="time">Waiting for detector data...</span></div>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <div class="footer-item">Last Updated: <span id="time">—</span></div>
+        <div id="connection-status">
+            <div class="conn-dot" id="conn-dot"></div>
+            <span id="conn-label">Connecting...</span>
+        </div>
+        <div class="footer-item">Data source: <span id="data-source">Firebase Realtime</span></div>
+    </div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

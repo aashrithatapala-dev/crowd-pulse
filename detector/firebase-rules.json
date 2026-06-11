@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "latest": {
+      ".read": true,
+      ".write": false
+    },
+    "readings": {
+      ".read": true,
+      ".write": false
+    },
+    ".read": false,
+    ".write": false
+  }
+}
